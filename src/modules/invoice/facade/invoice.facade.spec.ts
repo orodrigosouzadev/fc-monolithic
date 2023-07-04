@@ -103,12 +103,12 @@ describe("Invoice Facade test", () => {
     expect(result.id).toEqual("1");
     expect(result.name).toEqual("Invoice 1");
     expect(result.document).toEqual("1234567890");
-    expect(result.street).toEqual("Street 1");
-    expect(result.complement).toEqual("Casa 1");
-    expect(result.number).toEqual("123");
-    expect(result.city).toEqual("São Paulo");
-    expect(result.state).toEqual("SP");
-    expect(result.zipCode).toEqual("12345678");
+    expect(result.address.street).toEqual("Street 1");
+    expect(result.address.complement).toEqual("Casa 1");
+    expect(result.address.number).toEqual("123");
+    expect(result.address.city).toEqual("São Paulo");
+    expect(result.address.state).toEqual("SP");
+    expect(result.address.zipCode).toEqual("12345678");
 
     expect(result.items.length).toBe(2);
 

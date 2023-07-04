@@ -53,11 +53,11 @@ describe("Find invoice usecase unit test", () => {
     expect(invoiceRepository.find).toBeCalledTimes(1);
     expect(result.name).toBe("Cliente 1");
     expect(result.document).toBe("123456789");
-    expect(result.street).toBe(address.street);
-    expect(result.city).toBe(address.city);
-    expect(result.state).toBe(address.state);
-    expect(result.zipCode).toBe(address.zipCode);
-    expect(result.complement).toBe(address.complement);
+    expect(result.address.street).toBe(address.street);
+    expect(result.address.city).toBe(address.city);
+    expect(result.address.state).toBe(address.state);
+    expect(result.address.zipCode).toBe(address.zipCode);
+    expect(result.address.complement).toBe(address.complement);
     expect(result.items[0].id).toBe(items[0].id.id);
     expect(result.items[0].name).toBe(items[0].name);
     expect(result.items[0].price).toBe(items[0].price);
